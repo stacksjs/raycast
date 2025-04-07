@@ -1,6 +1,8 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "target": "esnext",
+    "jsx": "react-jsx",
     "lib": ["esnext"],
     "moduleDetection": "force",
     "module": "esnext",

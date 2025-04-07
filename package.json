@@ -1,9 +1,11 @@
 {
-  "name": "@stacksjs/raycast",
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "buddy",
   "type": "module",
   "version": "0.0.1",
-  "description": "A simple TypeScript starter kit using Bun.",
-  "author": "Chris Breuer <chris@stacksjs.org>",
+  "title": "Stacks Buddy",
+  "description": "The Stacks Raycast extension.",
+  "author": "Stacks.js",
   "license": "MIT",
   "homepage": "https://github.com/stacksjs/raycast#readme",
   "repository": {
@@ -17,6 +19,9 @@
     "raycast",
     "typescript"
   ],
+  "categories": [
+    "Productivity"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -28,11 +33,23 @@
   },
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "icon": "stacks-logo.ico",
+  "owner": "stacks",
+  "commands": [
+    {
+      "name": "index",
+      "title": "Stacks Buddy",
+      "subtitle": "Stacks Buddy Commands",
+      "description": "Search and view Stacks Buddy commands",
+      "mode": "view"
+    }
+  ],
   "files": ["README.md", "dist"],
   "scripts": {
+    "dev": "ray develop",
     "build": "bun --bun build.ts",
-    "lint": "bunx --bun eslint .",
-    "lint:fix": "bunx --bun eslint . --fix",
+    "lint": "bunx --bun eslint . && ray lint",
+    "lint:fix": "bunx --bun eslint . --fix && ray lint --fix",
     "fresh": "bunx rimraf node_modules/ bun.lock && bun i",
     "changelog": "bunx changelogen --output CHANGELOG.md",
     "prepublishOnly": "bun --bun run build",
@@ -41,7 +58,8 @@
     "dev:docs": "bun --bun vitepress dev docs",
     "build:docs": "bun --bun vitepress build docs",
     "preview:docs": "bun --bun vitepress preview docs",
-    "typecheck": "bun --bun tsc --noEmit"
+    "typecheck": "bun --bun tsc --noEmit",
+    "publish": "bunx --bun @raycast/api@latest publish"
   },
   "dependencies": {
     "@raycast/api": "^1.94.4",
