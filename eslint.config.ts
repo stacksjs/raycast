@@ -1,7 +1,6 @@
-import type { ESLintConfig } from '@stacksjs/eslint-config'
-import stacks from '@stacksjs/eslint-config'
+import antfu from '@antfu/eslint-config'
 
-const config: ESLintConfig = stacks({
+const config = antfu({
   stylistic: {
     indent: 2,
     quotes: 'single',
