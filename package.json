@@ -43,6 +43,10 @@
     "preview:docs": "bun --bun vitepress preview docs",
     "typecheck": "bun --bun tsc --noEmit"
   },
+  "dependencies": {
+    "@raycast/api": "^1.94.4",
+    "@raycast/utils": "^1.19.1"
+  },
   "devDependencies": {
     "@stacksjs/docs": "^0.70.23",
     "@stacksjs/eslint-config": "^4.10.2-beta.3",
