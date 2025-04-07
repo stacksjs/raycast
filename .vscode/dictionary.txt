@@ -32,6 +32,7 @@ socio
 Solana
 Spatie
 stacksjs
+swiftpm
 twoslash
 typecheck
 unconfig
@@ -42,5 +43,6 @@ upath
 vite
 vitebook
 vitejs
+vitepress
 vue-demi
 vueus
