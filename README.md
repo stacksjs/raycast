@@ -6,42 +6,47 @@
 <!-- [![npm downloads][npm-downloads-src]][npm-downloads-href] -->
 <!-- [![Codecov][codecov-src]][codecov-href] -->
 
-# bun-ts-starter
+# Stacks Raycast
 
-This is an opinionated TypeScript Starter kit to help kick-start development of your next Bun package.
+This project contains the Raycast extension for Stacks Buddy.
 
-## Features
+## API Reference
 
-This Starter Kit comes pre-configured with the following:
+### Buddy Commands API
 
-- 🛠️ [Powerful Build Process](https://github.com/oven-sh/bun) - via Bun
-- 💪🏽 [Fully Typed APIs](https://www.typescriptlang.org/) - via TypeScript
-- 📚 [Documentation-ready](https://vitepress.dev/) - via VitePress
-- ⌘ [CLI & Binary](https://www.npmjs.com/package/bunx) - via Bun & CAC
-- 🧪 [Built With Testing In Mind](https://bun.sh/docs/cli/test) - pre-configured unit-testing powered by [Bun](https://bun.sh/docs/cli/test)
-- 🤖 [Renovate](https://renovatebot.com/) - optimized & automated PR dependency updates
-- 🎨 [ESLint](https://eslint.org/) - for code linting _(and formatting)_
-- 📦️ [pkg.pr.new](https://pkg.pr.new) - Continuous (Preview) Releases for your libraries
-- 🐙 [GitHub Actions](https://github.com/features/actions) - runs your CI _(fixes code style issues, tags releases & creates its changelogs, runs the test suite, etc.)_
-
-## Get Started
-
-It's rather simple to get your package development started:
-
-```bash
-# you may use this GitHub template or the following command:
-bunx degit stacksjs/ts-starter my-pkg
-cd my-pkg
-
- # if you don't have pnpm installed, run `npm i -g pnpm`
-bun i # install all deps
-bun run build # builds the library for production-ready use
-
-# after you have successfully committed, you may create a "release"
-bun run release # automates git commits, versioning, and changelog generations
+```http
+  TODO: Stacks buddy command must first be deployed
 ```
 
-_Check out the package.json scripts for more commands._
+#### Get all items
+
+```http
+  GET /api/commands
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
+
+#### Search Command
+
+```http
+  GET /api/items/${command}
+```
+
+| Parameter | Type     | Description                                                |
+| :-------- | :------- | :--------------------------------------------------------- |
+| `id`      | `string` | **Required**. signature or description of command to fetch |
+
+#### Get Versions
+
+```http
+  GET /api/versions
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
 
 ## Testing
 
