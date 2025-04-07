@@ -10,3 +10,12 @@ logs
 node_modules
 temp
 docs/.vitepress/cache
+
+# Raycast specific files
+raycast-env.d.ts
+.raycast-swift-build
+.swiftpm
+compiled_raycast_swift
+
+# misc
+.DS_Store
