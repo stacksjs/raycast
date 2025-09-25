@@ -79,7 +79,7 @@
     "bun-git-hooks": "^0.2.19",
     "bun-plugin-dtsx": "^0.21.12",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.21",
+    "eslint-plugin-react-refresh": "^0.4.22",
     "typescript": "^5.9.2"
   },
   "overrides": {
