@@ -64,23 +64,23 @@
     "publish": "bunx --bun @raycast/api@latest publish"
   },
   "dependencies": {
-    "@raycast/api": "^1.94.4",
+    "@raycast/api": "^1.103.2",
     "@raycast/utils": "^1.19.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.11.0",
     "@eslint-react/eslint-plugin": "^1.41.0",
-    "@stacksjs/bumpx": "^0.1.17",
+    "@stacksjs/bumpx": "^0.1.84",
     "@stacksjs/docs": "^0.70.23",
     "@stacksjs/gitlint": "^0.1.5",
-    "@stacksjs/logsmith": "^0.1.8",
-    "@types/bun": "^1.2.8",
+    "@stacksjs/logsmith": "^0.1.18",
+    "@types/bun": "^1.2.23",
     "buddy-bot": "^0.8.9",
     "bun-git-hooks": "^0.2.19",
-    "bun-plugin-dtsx": "^0.21.9",
+    "bun-plugin-dtsx": "^0.21.12",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "typescript": "^5.8.3"
+    "eslint-plugin-react-refresh": "^0.4.23",
+    "typescript": "^5.9.3"
   },
   "overrides": {
     "unconfig": "0.3.10"
