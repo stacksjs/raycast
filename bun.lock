@@ -843,7 +843,7 @@
 
     "browserslist": ["browserslist@4.28.2", "", { "dependencies": { "baseline-browser-mapping": "^2.10.12", "caniuse-lite": "^1.0.30001782", "electron-to-chromium": "^1.5.328", "node-releases": "^2.0.36", "update-browserslist-db": "^1.2.3" }, "bin": { "browserslist": "cli.js" } }, "sha512-48xSriZYYg+8qXna9kwqjIVzuQxi+KYWp2+5nCYnYKPTr0LvD89Jqk2Or5ogxz0NUMfIjhh2lIUX/LyX9B4oIg=="],
 
-    "buddy-bot": ["buddy-bot@0.9.18", "", { "dependencies": { "bunfig": "^0.15.6", "prompts": "^2.4.2", "ts-pantry": "^0.8.16" }, "bin": { "buddy-bot": "./dist/bin/cli.js" } }, "sha512-OWubiloY6XuUbAPrURZoGRWn7AhGeeT8RXlpz66tfBOFbijxVr6eT3CcUmb27vMC1n986ZuZWAZUzIFbkMjUxg=="],
+    "buddy-bot": ["buddy-bot@0.9.19", "", { "dependencies": { "bunfig": "^0.15.6", "prompts": "^2.4.2", "ts-pantry": "^0.8.16" }, "bin": { "buddy-bot": "./dist/bin/cli.js" } }, "sha512-ZwnFngjei9ssDCpjejUCslEke6Q5006jubuEcIpkwckg1P+ojph3iAIDZyyiFgyeQkuaBCqnEbxnrsAcf2pxow=="],
 
     "buffer-from": ["buffer-from@1.1.2", "", {}, "sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ=="],
 
