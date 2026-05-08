@@ -71,7 +71,7 @@ You can also try to convince your employer to sponsor Stacks as a business. This
   - Small logo placement in the README of >70x `stacksjs/core` repos, `stacksjs/stacks`, `tlsx`, `rpx`, `dtsx`, `localtunnels`, `bunfig`, `vite-plugin-local`, `ts-collect`, `ts-spreadsheets`, and few others.
   - Small logo placement in the `BACKERS.md` file of >70x `stacksjs/core` repos, `stacksjs/stacks`, `tlsx`, `rpx`, `dtsx`, `localtunnels`, `bunfig`, `vite-plugin-local`, `ts-collect`, `ts-spreadsheets`, and few others.
 
----
+***
 
 - **Generous Backer (USD$25/mo):**
   - Private Discord channel invite
@@ -79,13 +79,13 @@ You can also try to convince your employer to sponsor Stacks as a business. This
   - Social media follow
   - Name listed in the `BACKERS.md` file of >70x `stacksjs/core` repos, `stacksjs/stacks`, `tlsx`, `rpx`, `dtsx`, `localtunnels`, `bunfig`, `vite-plugin-local`, `ts-collect`, `ts-spreadsheets`, and few others, above other individual backers.
 
----
+***
 
 - **Sponsorware Tier (USD$10/mo):**
   - Get access to all current sponsorware projects.
   - Name listed in the `BACKERS.md` file of >70x `stacksjs/core` repos, `stacksjs/stacks`, `tlsx`, `rpx`, `dtsx`, `localtunnels`, `bunfig`, `vite-plugin-local`, `ts-collect`, `ts-spreadsheets`, and few others.
 
----
+***
 
 - **Individual Backer (USD$5/mo):**
   - Name listed in the `BACKERS.md` file of >70x `stacksjs/core` repos, `stacksjs/stacks`, `tlsx`, `rpx`, `dtsx`, `localtunnels`, `bunfig`, `vite-plugin-local`, `ts-collect`, `ts-spreadsheets`, and few others.
@@ -124,8 +124,8 @@ You can also try to convince your employer to sponsor Stacks as a business. This
 
 - Vacant
 
-___
+***
 
 #### Thanks to Vue.js for the inspiration for this sponsorship page
 
-*You can find their sponsorship page [here](https://vuejs.org/sponsor/).*
+*You can find [Vue.js's sponsorship page](https://vuejs.org/sponsor/) for reference.*

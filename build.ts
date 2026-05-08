@@ -1,6 +1,6 @@
 import { dts } from 'bun-plugin-dtsx'
 
-// eslint-disable-next-line antfu/no-top-level-await
+// eslint-disable-next-line ts/no-top-level-await
 await Bun.build({
   entrypoints: ['src/index.tsx'],
   outdir: './dist',
