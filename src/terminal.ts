@@ -1,6 +1,6 @@
-import { environment, open } from '@raycast/api'
 import { chmod, mkdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
+import { environment, open } from '@raycast/api'
 import { buildTerminalScript } from './buddy'
 
 export async function runBuddyInTerminal(
@@ -21,5 +21,5 @@ export async function runBuddyInTerminal(
 }
 
 function safeFileName(commandName: string): string {
-  return commandName.replaceAll(/[^a-z0-9_-]/gi, '-')
+  return commandName.replaceAll(/[^\w-]/g, '-')
 }

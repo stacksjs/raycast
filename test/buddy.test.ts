@@ -27,7 +27,7 @@ describe('Buddy command inventory', () => {
 
   it('builds copyable commands and safely quotes shell values', () => {
     expect(commandLine(command)).toBe('./buddy make:model')
-    expect(shellQuote("Chris' Project")).toBe("'Chris'\\'' Project'")
+    expect(shellQuote('Chris\' Project')).toBe('\'Chris\'\\\'\' Project\'')
   })
 
   it('identifies destructive commands without flagging ordinary actions', () => {
@@ -36,9 +36,9 @@ describe('Buddy command inventory', () => {
   })
 
   it('builds a terminal script without interpolating unquoted paths or arguments', () => {
-    const script = buildTerminalScript("/tmp/Chris' Project", 'make:model', ['Customer Record'])
+    const script = buildTerminalScript('/tmp/Chris\' Project', 'make:model', ['Customer Record'])
 
-    expect(script).toContain("cd -- '/tmp/Chris'\\'' Project'")
-    expect(script).toContain("'/tmp/Chris'\\'' Project/buddy' 'make:model' 'Customer Record'")
+    expect(script).toContain('cd -- \'/tmp/Chris\'\\\'\' Project\'')
+    expect(script).toContain('\'/tmp/Chris\'\\\'\' Project/buddy\' \'make:model\' \'Customer Record\'')
   })
 })

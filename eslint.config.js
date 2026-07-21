@@ -7,7 +7,6 @@ const config = antfu({
   },
 
   typescript: true,
-  react: true,
   jsonc: true,
   yaml: true,
   ignores: [

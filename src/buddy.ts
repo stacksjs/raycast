@@ -62,7 +62,7 @@ export function isDestructiveCommand(name: string): boolean {
 }
 
 export function shellQuote(value: string): string {
-  return `'${value.replaceAll("'", "'\\''")}'`
+  return `'${value.replaceAll('\'', '\'\\\'\'')}'`
 }
 
 export function buildTerminalScript(projectDirectory: string, commandName: string, extraArguments: string[] = []): string {
