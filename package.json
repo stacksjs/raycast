@@ -4,7 +4,7 @@
   "type": "module",
   "version": "0.70.23",
   "title": "Stacks Buddy",
-  "description": "The Stacks Raycast extension.",
+  "description": "Search and run every Buddy command in a local Stacks project.",
   "author": "Stacks.js",
   "license": "MIT",
   "homepage": "https://github.com/stacksjs/raycast#readme",
@@ -33,12 +33,29 @@
   "module": "./dist/index.js",
   "icon": "stacks-logo.ico",
   "owner": "stacks",
+  "preferences": [
+    {
+      "name": "projectDirectory",
+      "type": "directory",
+      "required": true,
+      "title": "Stacks Project",
+      "description": "Select the Stacks project whose Buddy commands should be loaded."
+    },
+    {
+      "name": "terminalApplication",
+      "type": "textfield",
+      "required": true,
+      "default": "Terminal",
+      "title": "Terminal Application",
+      "description": "The macOS terminal application used to run Buddy commands."
+    }
+  ],
   "commands": [
     {
       "name": "index",
       "title": "Stacks Buddy",
       "subtitle": "Stacks Buddy Commands",
-      "description": "Search and view Stacks Buddy commands",
+      "description": "Search and run every command registered by a local Stacks project",
       "mode": "view"
     }
   ],
@@ -47,13 +64,13 @@
     "dist"
   ],
   "scripts": {
-    "dev": "  npx ray develop",
+    "dev": "bunx ray develop",
     "build": "bun --bun build.ts",
     "fresh": "bunx rimraf node_modules/ bun.lock && bun i",
     "prepublishOnly": "bun --bun run build",
     "test": "bun test",
-    "lint": "bunx --bun pickier .",
-    "lint:fix": "bunx --bun pickier . --fix",
+    "lint": "bunx --bun pickier . --ignore-path .gitignore",
+    "lint:fix": "bunx --bun pickier . --ignore-path .gitignore --fix",
     "changelog": "bunx logsmith --verbose",
     "changelog:generate": "bunx logsmith --output CHANGELOG.md",
     "release": "bunx --bun bumpx prompt --recursive",

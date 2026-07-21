@@ -6,53 +6,42 @@ export function DetailsView({ command }: { command: BuddyCommand }): React.JSX.E
   return <List.Item.Detail markdown={buildMarkdown(command)} />
 }
 
-function buildMarkdown({ description, synopsis, options, arguments: args }: Partial<BuddyCommand>) {
-  return `# Stacks Buddy
-    \n ---
-    \n ## Description
-    \n - ${description}
-    \n\n### Usage
-    \n\`\`\`
-    \n${synopsis}
-    \n\`\`\`
-    \n\n
-    \n ${
-      options?.length
-        ? `## Options
-      \n ---
+export function buildMarkdown(command: BuddyCommand): string {
+  const sections = [
+    `# ${command.name}`,
+    command.description || 'No description provided.',
+    `## Usage\n\n\`\`\`sh\n${command.usage.replace(/^\$ /, '')}\n\`\`\``,
+  ]
 
-          ${options
-            ?.map(({ name, description }, i) => {
-              const value = 'optional'
-              const valueDescription = 'value optional'
-              return `${i === 0 ? '\n' : ''}
-      \n -- ${name}
-      \n\`\`\`
-      \n- ${value}, ${valueDescription}
-      \n- ${description}
-      \n\`\`\`\n`
-            })
-            .join('')}`
-        : ''
-    }
+  if (command.aliases.length)
+    sections.push(`## Aliases\n\n${command.aliases.map(alias => `- \`${alias}\``).join('\n')}`)
 
-    \n ${
-      args?.length
-        ? `## Arguments
-    \n ---
+  if (command.arguments.length) {
+    const argumentsTable = command.arguments
+      .map(argument => `| \`${argument.name}\` | ${argument.required ? 'Required' : 'Optional'} | ${argument.variadic ? 'Yes' : 'No'} |`)
+      .join('\n')
+    sections.push(`## Arguments\n\n| Name | Value | Variadic |\n| --- | --- | --- |\n${argumentsTable}`)
+  }
 
-        ${args
-          ?.map(({ name, description, value_required }, i) => {
-            const value = value_required ? 'required' : 'optional'
-            const valueDescription = 'value optional'
-            return `${i === 0 ? '\n' : ''}
-    \n <${name}>
-    \n\`\`\`
-    \n- ${value}, ${valueDescription}
-    \n- ${description}
-    \n\`\`\`\n`
-          })
-          .join('')}`
-        : ''
-    }`
+  if (command.options.length) {
+    const options = command.options
+      .map(option => `- \`${formatFlags(option.flags)}\` - ${option.description}${formatDefault(option.default)}`)
+      .join('\n')
+    sections.push(`## Options\n\n${options}`)
+  }
+
+  if (command.examples.length) {
+    const examples = command.examples.map(example => `\`\`\`sh\n${example}\n\`\`\``).join('\n\n')
+    sections.push(`## Examples\n\n${examples}`)
+  }
+
+  return sections.join('\n\n')
+}
+
+function formatFlags(flags: string[]): string {
+  return flags.map(flag => `${flag.length === 1 ? '-' : '--'}${flag}`).join(', ')
+}
+
+function formatDefault(value: unknown): string {
+  return value === undefined ? '' : ` Default: \`${String(value)}\`.`
 }

@@ -1,18 +1,36 @@
-interface Argument {
+export interface BuddyCommandArgument {
   name: string
-  description: string
-  value_required: boolean
+  required: boolean
+  variadic: boolean
 }
 
-interface Option {
+export interface BuddyCommandOption {
   name: string
+  flags: string[]
   description: string
+  required: boolean
+  boolean: boolean
+  negated: boolean
+  default?: unknown
 }
 
 export interface BuddyCommand {
-  signature: string
+  name: string
   description: string
-  synopsis: string
-  arguments: Argument[]
-  options: Option[]
+  aliases: string[]
+  namespace?: string
+  usage: string
+  arguments: BuddyCommandArgument[]
+  options: BuddyCommandOption[]
+  examples: string[]
+}
+
+export interface BuddyCommandInventory {
+  commands: BuddyCommand[]
+  total: number
+}
+
+export interface Preferences {
+  projectDirectory: string
+  terminalApplication: string
 }
