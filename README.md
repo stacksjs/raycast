@@ -1,97 +1,42 @@
-<p align="center"><img src=".github/art/cover.jpg" alt="Social Card of this repo"></p>
+# Stacks Buddy for Raycast
 
-[![npm version](https://img.shields.io/npm/v/bun-ts-starter?style=flat-square)](https://npmjs.com/package/bun-ts-starter)
-[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/stacksjs/ts-starter/ci.yml?style=flat-square&branch=main)](https://github.com/stacksjs/ts-starter/actions?query=workflow%3Aci)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-<!-- [![npm downloads][npm-downloads-src]][npm-downloads-href] -->
-<!-- [![Codecov][codecov-src]][codecov-href] -->
+Search and run every Buddy command registered by a local Stacks project, including custom commands from `app/Commands`.
 
-# Stacks Raycast
+## How it works
 
-This project contains the Raycast extension for Stacks Buddy.
+The extension reads the selected project's command inventory with:
 
-## API Reference
-
-### Buddy Commands API
-
-```http
-  TODO: Stacks buddy command must first be deployed
+```sh
+./buddy list --json --no-interaction
 ```
 
-#### Get all items
+There is no hosted command API and no stale command catalog. The list always reflects the framework and custom commands installed in the selected project.
 
-```http
-  GET /api/commands
+## Setup
+
+1. Install the extension in Raycast.
+2. Choose a Stacks project directory in the extension preferences.
+3. Optionally choose the terminal application used to launch commands.
+4. Open `Stacks Buddy`, search for a command, and press Return.
+
+Commands open in a terminal so interactive prompts, logs, and long-running development servers behave exactly as they do when Buddy is launched directly. Commands that remove or replace resources receive an additional Raycast confirmation before the terminal opens.
+
+## Development
+
+```sh
+bun install
+bun run dev
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
+Validate the extension with:
 
-#### Search Command
-
-```http
-  GET /api/items/${command}
-```
-
-| Parameter | Type     | Description                                                |
-| :-------- | :------- | :--------------------------------------------------------- |
-| `id`      | `string` | **Required**. signature or description of command to fetch |
-
-#### Get Versions
-
-```http
-  GET /api/versions
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-
-## Testing
-
-```bash
+```sh
 bun test
+bun run typecheck
+bun run lint
+bun run build
 ```
-
-## Changelog
-
-Please see our [releases](https://github.com/stackjs/bun-ts-starter/releases) page for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
-
-## Community
-
-For help, discussion about best practices, or any other conversation that would benefit from being searchable:
-
-[Discussions on GitHub](https://github.com/stacksjs/ts-starter/discussions)
-
-For casual chit-chat with others using this package:
-
-[Join the Stacks Discord Server](https://discord.gg/stacksjs)
-
-## Postcardware
-
-“Software that is free, but hopes for a postcard.” We love receiving postcards from around the world showing where Stacks is being used! We showcase them on our website too.
-
-Our address: Stacks.js, 12665 Village Ln #2306, Playa Vista, CA 90094, United States 🌎
-
-## Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Stacks development. If you are interested in becoming a sponsor, please reach out to us.
-
-- [JetBrains](https://www.jetbrains.com/)
-- [The Solana Foundation](https://solana.com/)
 
 ## License
 
-The MIT License (MIT). Please see [LICENSE](LICENSE.md) for more information.
-
-Made with 💙
-
-<!-- Badges -->
-
-<!-- [codecov-src]: https://img.shields.io/codecov/c/gh/stacksjs/ts-starter/main?style=flat-square
-[codecov-href]: https://codecov.io/gh/stacksjs/ts-starter -->
+MIT
