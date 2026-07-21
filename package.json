@@ -5,7 +5,7 @@
   "version": "0.70.23",
   "title": "Stacks Buddy",
   "description": "Search and run every Buddy command in a local Stacks project.",
-  "author": "Stacks.js",
+  "author": "chrisbreuer",
   "license": "MIT",
   "homepage": "https://github.com/stacksjs/raycast#readme",
   "repository": {
@@ -31,7 +31,7 @@
     }
   },
   "module": "./dist/index.js",
-  "icon": "stacks-logo.ico",
+  "icon": "stacks-logo.png",
   "owner": "stacks",
   "preferences": [
     {

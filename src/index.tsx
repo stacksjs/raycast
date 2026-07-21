@@ -38,7 +38,7 @@ export default function Buddy(): React.JSX.Element {
           subtitle={command.description}
           keywords={[...command.aliases, command.description]}
           key={command.name}
-          icon={{ source: 'stacks-logo.ico' }}
+          icon={{ source: 'stacks-logo.png' }}
           detail={<DetailsView command={command} />}
           actions={<CommandActions command={command} preferences={preferences} revalidate={revalidate} />}
         />

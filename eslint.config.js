@@ -1,6 +1,6 @@
 import antfu from '@antfu/eslint-config'
 
-const config: any = antfu({
+const config = antfu({
   stylistic: {
     indent: 2,
     quotes: 'single',
