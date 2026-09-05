@@ -82,7 +82,7 @@
     "publish": "bunx --bun @raycast/api@latest publish"
   },
   "dependencies": {
-    "@raycast/api": "^1.94.4",
+    "@raycast/api": "^2.2.0",
     "@raycast/utils": "^1.19.1"
   },
   "devDependencies": {
