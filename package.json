@@ -96,7 +96,7 @@
     "buddy-bot": "^0.9.12",
     "bun-git-hooks": "^0.2.19",
     "bun-plugin-dtsx": "^0.21.9",
-    "typescript": "^5.8.3"
+    "typescript": "^7.0.2"
   },
   "git-hooks": {
     "pre-commit": {
